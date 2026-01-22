@@ -56,9 +56,9 @@ private _fnc_OnConfirm = {
     private _amount = sliderPosition (_display displayCtrl 3815);
     private _type = lbCurSel (_display displayCtrl 3814);
     private _radius = sliderPosition(_display displayCtrl 3816);
-    private _fill = false; //cbChecked(_display displayCtrl 3817);
+    private _array = lbCurSel (_display displayCtrl 3817);
 
-   [_logic, _amount, _type, _radius, _fill] call FUNC(spawnPatientModule);
+   [_logic, _amount, _type, _radius, _array] call FUNC(spawnPatientModule);
 };
 
 _display displayAddEventHandler ["Unload", _fnc_onUnload];

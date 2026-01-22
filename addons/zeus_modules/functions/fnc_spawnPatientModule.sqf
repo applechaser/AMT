@@ -10,7 +10,7 @@
 		1:	int		-	amount of patients to spawn
 		2: 	int		- 	type of casualty
 		3: 	int		-	radius to spawn casualties in
-		4: 	bool	-	fill vehicle if module is attached to one
+		4: 	bool	-	array to use (0 = unit array 1, 1 = unit array 2)
 
 
 
@@ -23,7 +23,7 @@
 		<example>
 */
 
-params ["_logic","_amount", "_type", "_radius", "_fill"];
+params ["_logic","_amount", "_type", "_radius", "_array"];
 
 //FYI:
 //private _bodyparts = ["Head", "Body", "LeftArm", "RightArm", "LeftLeg", "RightLeg"];
@@ -47,7 +47,17 @@ if(_vehicle isKindOf "LandVehicle" || _vehicle isKindOf "Air" || _vehicle isKind
 
 //spawn the patient(s)
 for "i" from 1 to _amount do {
-	private _unit = _group createUnit [selectRandom (missionNamespace getVariable [QGVAR(spawnUnits), []]), position _logic, [], _radius, "CARGO"];
+	private _unit = _group;
+	//create unit from selected array
+	switch (_array) do{
+		case 0: {
+			_unit = _group createUnit [selectRandom (missionNamespace getVariable [QGVAR(spawnUnits1), []]), position _logic, [], _radius, "CARGO"];
+		};
+		case 1: {
+			_unit = _group createUnit [selectRandom (missionNamespace getVariable [QGVAR(spawnUnits2), []]), position _logic, [], _radius, "CARGO"];
+		};
+	};
+	
 	_unit setVariable ["kat_vitals_simpleMedical", false, true];
 
 	publicVariable "_unit";

@@ -112,20 +112,30 @@ class GVAR(RscspawnPatient) : RscDisplayAttributes {
                             w = QUOTE(W_PART(15.9));
                             h = QUOTE(H_PART(1));
 						};
-						// class Title4: Title1 {
-						// 	idc = -1;
-						// 	text = "Fill vehicle?";
-						// 	toolTip = "";
-						// 	y = QUOTE(H_PART(3.3));
-						// };
-						// class fillVehicle : RscCheckBox {
-						// 	idc = 3817;
-						// 	toolTip = "Doesn't work on emtpy vehicle!";
-						// 	x = QUOTE(W_PART(10.1));
-						// 	y = QUOTE(H_PART(3.3));
-                        //     w = QUOTE(W_PART(1));
-                        //     h = QUOTE(H_PART(1));
-						// };
+						class Title4: Title1 {
+							idc = -1;
+							text = "Classname list";
+							toolTip = "";
+							y = QUOTE(H_PART(3.3));
+						};
+						class fillVehicle : RscCombo  {
+							idc = 3817;
+							toolTip = "select which classname list should be used";
+							x = QUOTE(W_PART(10.1));
+							y = QUOTE(H_PART(3.3));
+                            w = QUOTE(W_PART(15.9));
+                            h = QUOTE(H_PART(1));
+							colorBackground[] = {0, 0, 0, 0.7};
+							class Items {
+								class array1 {
+									text = "list 1";
+									default = 1;
+								};
+								class array2 {
+									text = "list 2";
+								};
+							};
+						};
 					};
 				};
 			};
