@@ -11,7 +11,7 @@
 	0,
 	{
 		private _unitsArray = _this splitString ", ";
-		if(count _unitsArray == 0) then {
+		if(_unitsArray isEqualTo []) then {
 			_unitsArray pushBack "B_Soldier_F";
 		};
 		missionNamespace setVariable [QGVAR(spawnUnits1), _unitsArray, false]
@@ -29,7 +29,7 @@
 	0,
 	{
 		private _unitsArray = _this splitString ", ";
-		if(count _unitsArray == 0) then {
+		if(_unitsArray isEqualTo []) then {
 			_unitsArray pushBack "C_man_1";
 		};
 		missionNamespace setVariable [QGVAR(spawnUnits2), _unitsArray, false]
