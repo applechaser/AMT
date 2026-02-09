@@ -30,20 +30,7 @@ params ["_logic","_amount", "_type", "_radius", "_array"];
 //private _damageTypes = ["bullet", "grenade", "explosive", "shell", "vehiclehit", "vehiclecrash", "collision", "falling", "backlast", "stab", "punch", "ropeburn", "drowning", "fire", "burn", "unkown"];
 
 
-//spawn in vehicle if module is attached to one
-private _vehicle = attachedTo _logic;
 private _group = createGroup civilian;
-if(_vehicle isKindOf "LandVehicle" || _vehicle isKindOf "Air" || _vehicle isKindOf "Ship") then {
-	_group = group _vehicle;
-	//check passenger seats left
-	private _seats = _vehicle emptyPositions "CargoNoFFV";
-	if(_fill) then {
-		_amount = _seats;
-	} else{
-		_amount = _amount min _seats;
-	};
-};
-
 
 //spawn the patient(s)
 for "i" from 1 to _amount do {

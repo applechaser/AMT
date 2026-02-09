@@ -16,12 +16,12 @@ class CfgVehicles {
 	class GVAR(moduleSpawnPatient) : GVAR(baseModule) {
 		displayName = "Spawn patients";
 		curatorInfoType = QGVAR(RscspawnPatient);
-		curatorCanAttach = 1;
+		curatorCanAttach = 0;
 	};
 
 	class GVAR(moduleAddInjury) : GVAR(baseModule) {
 		displayName = "add injury to unit";
 		curatorInfoType = QGVAR(RscaddInjury);
-		curatorCanAttach = 1;
+		curatorCanAttach = 0;
 	};
 };
