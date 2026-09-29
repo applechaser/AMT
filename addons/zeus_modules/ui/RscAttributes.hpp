@@ -83,6 +83,9 @@ class GVAR(RscspawnPatient) : RscDisplayAttributes {
 								class randHeavy {
 									text = "random heavy";
 								};
+								class catastrophic {
+									text = "catastrophic";
+								};
 
 							};
 						};
