@@ -32,6 +32,9 @@ params ["_logic","_amount", "_type", "_radius", "_array"];
 
 private _group = createGroup civilian;
 
+//play explosion sound because funni
+playSound3D ["a3\sounds_f\weapons\explosion\expl_big_1.wss", None, false, position _logic, 2, 1, 0];
+
 //spawn the patient(s)
 for "i" from 1 to _amount do {
 	private _unit = _group;
