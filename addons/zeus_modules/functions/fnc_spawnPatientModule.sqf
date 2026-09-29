@@ -110,12 +110,12 @@ for "i" from 1 to _amount do {
 			_unit setVariable ["kat_surgery_fractures", [0,0,0,1,2,0], true];
 		};
 		case 2: {	//set heavy
-			[_unit, 20, "Head", "explosive"] call ace_medical_fnc_addDamageToUnit;
-			[_unit, 10, "Body", "grenade"] call ace_medical_fnc_addDamageToUnit;
-			[_unit, 20, "LeftArm", "bullet"] call ace_medical_fnc_addDamageToUnit;
-			[_unit, 10, "RightArm", "shell"] call ace_medical_fnc_addDamageToUnit;
-			[_unit, 4, "LeftLeg", "falling"] call ace_medical_fnc_addDamageToUnit;
-			[_unit, 4, "RightLeg", "grenade"] call ace_medical_fnc_addDamageToUnit;
+			[_unit, 25, "Head", "explosive"] call ace_medical_fnc_addDamageToUnit;
+			[_unit, 15, "Body", "grenade"] call ace_medical_fnc_addDamageToUnit;
+			[_unit, 25, "LeftArm", "bullet"] call ace_medical_fnc_addDamageToUnit;
+			[_unit, 15, "RightArm", "shell"] call ace_medical_fnc_addDamageToUnit;
+			[_unit, 10, "LeftLeg", "falling"] call ace_medical_fnc_addDamageToUnit;
+			[_unit, 10, "RightLeg", "grenade"] call ace_medical_fnc_addDamageToUnit;
 			_unit setVariable ["kat_airway_occluded", true, true];
 			_unit setVariable ["kat_airway_obstruction", true, true];
 			_unit setVariable ["ace_medical_fractures", [0,0,1,1,1,1], true];
