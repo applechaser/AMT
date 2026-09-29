@@ -33,6 +33,7 @@ switch (_type) do {
 		[_unit, 4.5 + random 3 - 1.5, "RightLeg", "bullet"] call ace_medical_fnc_addDamageToUnit;
 		_unit setVariable ["kat_airway_occluded", true, true];
 		_unit setVariable ["ace_medical_fractures", [0,0,0,0,1,0], true];
+		_unit setVariable ["kat_surgery_fractures", [0,0,0,0,1,0], true];
 	};
 	case 1: {	//random medium
 		[_unit, 10 + random 6 - 3, "Head", "grenade"] call ace_medical_fnc_addDamageToUnit;
@@ -44,6 +45,7 @@ switch (_type) do {
 		_unit setVariable ["kat_airway_occluded", true, true];
 		_unit setVariable ["kat_airway_obstruction", true, true];
 		_unit setVariable ["ace_medical_fractures", [0,0,0,1,1,0], true];
+		_unit setVariable ["kat_surgery_fractures", [0,0,0,1,2,0], true];
 	};
 	case 2: {	//random heavy
 		[_unit, 20 + random 10 - 5, "Head", "explosive"] call ace_medical_fnc_addDamageToUnit;
@@ -55,6 +57,7 @@ switch (_type) do {
 		_unit setVariable ["kat_airway_occluded", true, true];
 		_unit setVariable ["kat_airway_obstruction", true, true];
 		_unit setVariable ["ace_medical_fractures", [0,0,1,1,1,1], true];
+		_unit setVariable ["kat_surgery_fractures", [0,0,1,2,2,2], true];
 	};
 	case 3: {
 		_unit setVariable ["kat_chemical_airPoisoning", true, true];

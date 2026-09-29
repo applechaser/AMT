@@ -22,6 +22,6 @@ class CfgVehicles {
 	class GVAR(moduleAddInjury) : GVAR(baseModule) {
 		displayName = "add injury to unit";
 		curatorInfoType = QGVAR(RscaddInjury);
-		curatorCanAttach = 0;
+		curatorCanAttach = 1;
 	};
 };
